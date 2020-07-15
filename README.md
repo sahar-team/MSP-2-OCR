@@ -1,1 +1,2 @@
-# MSP-2-OCR
+# MSP-2
+MSP-2 Preparation
