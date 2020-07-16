@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <title>MSP-2 OCR</title>
 </head>
 <body>
    <h1>MSP-2 OCR</h1>
+   <h3>Numérisez vos documents papiers</h3>
    <form action="/comment/new" method="post">
    <!-- <input type="textarea" value="Commentaire" />  -->
-    <input type="file">
+    <input type="text" name="comment" placeholder="Url de l'image">
     <br>
     <br>
    <button type="submit">Envoyer la photo</button>
