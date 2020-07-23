@@ -10,12 +10,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    # url_image = "https://help.aronium.com/hc/user_images/clTArYEKfNByoZgk4a5o0w.png"
-    # headers = {"Ocp-Apim-Subscription-Key": '81fb31af7aa046f6b7bb0cd162b3ff09', 'Content-type': 'application/json'}
-    # url = 'https://westeurope.api.cognitive.microsoft.com/formrecognizer/v2.0/prebuilt/receipt/analyze'
-    # data = {"source": url_image}
-    # response = requests.post(url, headers=headers, data=data)
-    # print(response.text)
     return render_template('index.html')
 
 @app.route('/comment/new', methods=['POST'])
@@ -49,7 +43,7 @@ def add_comment():
 def get_text_from_url(url_image):
     
     url_image = url_image
-    subscription_key = '3878ef99c82a42c184eb1a2ef7c3773b'
+    subscription_key = <Mettrevotreclefazure>
     endpoint = "https://quentin-computervision.cognitiveservices.azure.com/"
     ocr_url = endpoint + "vision/v3.0/ocr"
     
