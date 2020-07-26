@@ -95,8 +95,8 @@ def get_random_string(length):
     return result_str
     
 def get_image_from_url(url_image):
-    subscription_key = '3878ef99c82a42c184eb1a2ef7c3773b'
-    endpoint = 'https://quentin-computervision.cognitiveservices.azure.com/'
+    subscription_key = os.getenv("COMPUTER_VISION_SUBSCRIPTION_KEY")
+    endpoint = os.getenv("COMPUTER_VISION_ENDPOINT")
     text_recognition_url = endpoint + "vision/v3.0/read/analyze"
     # Set image_url to the URL of an image that you want to recognize.
     image_url = url_image
@@ -140,4 +140,3 @@ def get_image_from_url(url_image):
         ax.axes.add_patch(patch)
         plt.text(vertices[0][0]+image.size[0], vertices[0][1], text, fontsize=20, va="top")
     return fig, texte
-
